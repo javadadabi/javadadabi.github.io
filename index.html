@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>بازی ضرب</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body style="background-color: pink">
+  <audio id="claps" src="audio/three-short-claps.mp3"></audio>
+  <!-- Add your site or application content here -->
+  <H1 align="center">سلام محیا </H1>
+  <input id="ta" maxlength="2" size="1" style="font-size: xxx-large" value="4"> <label>گلم ضرب رو تا چند یاد گرفتی عزیز؟</label></div><br>
+  <div dir="ltr">
+    <img src="./img/love_smile.jpeg" width="80" height="80" onclick="
+  document.getElementById('first_num').innerText=Math.floor(Math.random()*9+1);
+  document.getElementById('second_num').innerText=Math.floor(Math.random()* parseInt(document.getElementById('ta').value))+1;
+  document.getElementById('result').style.visibility ='hidden';
+  document.getElementById('answer').value='';
+  "><label  style="font-size: xxx-large"> امتیاز </label>
+    <label id="rank" style="font-size: xxx-large">0</label>
+    <img src="./img/book.png" width="80" height="80">
+
+    <label>روی من کلیک کن تا سوال جدید رو بپرسم</label>
+    <img src="./img/star.jpeg" width="80" height="80">
+
+    <br>
+  </div>
+  <div dir="ltr" style="font-size: xxx-large">
+    <label id="first_num">1</label>
+    <img src="./img/multiplication.png" width="20" height="20">
+    <label id="second_num">4</label>
+    <label>=</label>
+    <input type="text" id="answer" size="1" maxlength="2">
+    <img src="./img/unicorn_shine.gif" width="80" height="80" onclick="
+    const a=parseInt(document.getElementById('first_num').innerText);
+    const b=parseInt(document.getElementById('second_num').innerText);
+    const c=parseInt(document.getElementById('answer').value);
+    console.log(a,b,c)
+    if (c===a*b) {document.getElementById('result').src ='./img/papet.jpeg';
+    if (document.getElementById('result').style.visibility !=='visible'){
+     const claps = document.getElementById('claps');
+     claps.play();
+    document.getElementById('rank').textContent=parseInt(document.getElementById('rank').innerText)+1;}}
+    else {document.getElementById('result').src ='./img/shame.gif'}
+    document.getElementById('result').style.visibility ='visible';
+    ">
+    <img id="result" src="./img/papet.jpeg" style="visibility :hidden" width="80" height="80">
+
+  </div>
+
+</body>
+
+</html>
